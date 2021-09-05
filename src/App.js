@@ -1,8 +1,11 @@
 import './App.css';
 import React from 'react';
 import { CommonContext } from './components/CommonContext'
-import Main from './components/Main'
+import Main from './components//Main'
 import { UpdateButton } from './components/UpdateButton';
+
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 class App extends React.Component {
 
@@ -17,16 +20,16 @@ class App extends React.Component {
 
 
 
-    this.updateColor = () => {
+    this.updateColor = (color) => {
       this.setState({
-        color: "red"
+        color: color
       })
     }
 
 
 
     this.state = {
-      color: 'black',
+      color: 'red',
       updateColor: this.updateColor
     }
 
@@ -45,9 +48,16 @@ class App extends React.Component {
 
 
         <CommonContext.Provider value={this.state}>
+
+          <Header/>
+
           <h1>Hello World</h1>
           <Main />
           <UpdateButton />
+
+          <Footer/>
+
+
         </CommonContext.Provider>
 
 

@@ -5,13 +5,21 @@ export const UpdateButton = () => {
     return (
 
         <CommonContext.Consumer >
-        
-        {
-            ({updateColor}) =>(
-                <button  onClick={()=>updateColor()}  >UpdateColor</button>
-            )
-        }
 
-      </CommonContext.Consumer>
+            {
+                ({ updateColor }) => (
+
+                    <div>
+
+                        <button onClick={() => updateColor('yellow')}  >UpdateColor</button>
+                        <button onClick={() => updateColor('blue')}  >UpdateColor</button>
+
+
+                    </div>
+
+                )
+            }
+
+        </CommonContext.Consumer>
     )
 }

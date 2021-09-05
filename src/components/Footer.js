@@ -2,8 +2,7 @@
 import React from 'react';
 import { CommonContext } from './CommonContext'
 
-
-class Main extends React.Component{
+class Footer extends React.Component{
 
   render (){
     return(
@@ -15,7 +14,7 @@ class Main extends React.Component{
         
         {
             ({color}) =>(
-                <h1 style={{backgroundColor:color}}>  This Is From Main.js </h1>
+                <h1 style={{backgroundColor:color}}>  This Is From Futter.js </h1>
             )
         }
 
@@ -25,4 +24,4 @@ class Main extends React.Component{
   }
 }
 
-export default Main;
+export default Footer;
