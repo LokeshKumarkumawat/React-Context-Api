@@ -2,40 +2,53 @@ import './App.css';
 import React from 'react';
 import { CommonContext } from './components/CommonContext'
 import Main from './components/Main'
+import { UpdateButton } from './components/UpdateButton';
 
-class App extends React.Component{
+class App extends React.Component {
 
 
 
-  constructor(){
+  constructor() {
+
+
+
     super();
-    this.state={
-      color:'black',
-      updateColor:this.updateColor
-    }
 
-    this.updateColor = ()=>{
+
+
+
+    this.updateColor = () => {
       this.setState({
-        color:"red"
+        color: "red"
       })
     }
-   
+
+
+
+    this.state = {
+      color: 'black',
+      updateColor: this.updateColor
+    }
+
+
+
 
   }
 
 
 
 
-  render (){
-    return(
+  render() {
+    return (
       <div className="App">
 
 
 
-      <CommonContext.Provider value={this.state}>
-        <h1>Hello World</h1>
-        <Main/>
-      </CommonContext.Provider>
+        <CommonContext.Provider value={this.state}>
+          <h1>Hello World</h1>
+          <Main />
+          <UpdateButton />
+        </CommonContext.Provider>
 
 
 
@@ -43,7 +56,7 @@ class App extends React.Component{
 
 
 
-    </div>
+      </div>
     )
   }
 }

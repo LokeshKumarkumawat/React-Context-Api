@@ -7,8 +7,8 @@ export const UpdateButton = () => {
         <CommonContext.Consumer >
         
         {
-            ({color}) =>(
-                <button>UpdateColor</button>
+            ({updateColor}) =>(
+                <button  onClick={()=>updateColor()}  >UpdateColor</button>
             )
         }
 
